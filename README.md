@@ -1,25 +1,15 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # Rails5App
+Added following gems
+* gem 'bootstrap', '~> 4.0.0'
+* gem 'jquery-rails'
+
+
+rename app/assets/stylesheets/application.css to app/assets/stylesheets/application.scss and remove all content and import bootstrap
+
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+go to application.js and add below lines after //= require_tree . line
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
