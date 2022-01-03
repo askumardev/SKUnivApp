@@ -58,3 +58,6 @@ TRUNCATE users RESTART IDENTITY;
 select * from users;
 
 ========================================================
+* `rails g migration create_courses`
+* require 'hirb'
+* Hirb.enable({:width => 155, :height => 500})

@@ -10,3 +10,10 @@ a = User.create(first_name:"Admin", last_name:"Admin", email:"admin@example.com"
 
 a = User.create(first_name:"Satish", last_name:"Kumar", email:"sk@example.com", password:"password", password_confirmation:"password",
     is_admin:false, username:"sk")
+
+
+cs111 = Course.create(short_name: "CS111", name: "Intro to CS111 course", description: "Intro to Computer Science")
+cs211 = Course.create(short_name: "Na211", name: "Intro to Na211 course", description: "Intro to Nano Tech")
+cs311 = Course.create(short_name: "Bio311", name: "Intro to Bio311 course", description: "Intro to Biology")
+
+Course.create(short_name: "", name: "", description: "Intr")

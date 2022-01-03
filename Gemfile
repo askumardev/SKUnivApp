@@ -44,7 +44,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # gem 'rack-cors'
 
 gem 'materialize-sass', '~> 1.0.0'
-gem 'material_icons' 
+gem 'material_icons'
+gem 'hirb'
 
 group :development, :test do
   gem 'pry'
