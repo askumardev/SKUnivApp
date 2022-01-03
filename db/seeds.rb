@@ -16,4 +16,6 @@ cs111 = Course.create(short_name: "CS111", name: "Intro to CS111 course", descri
 cs211 = Course.create(short_name: "Na211", name: "Intro to Na211 course", description: "Intro to Nano Tech")
 cs311 = Course.create(short_name: "Bio311", name: "Intro to Bio311 course", description: "Intro to Biology")
 
-Course.create(short_name: "", name: "", description: "Intr")
+Student.create(name:"satish1", email:"sk1@example.com")
+Student.create(name:"satish2", email:"sk2@example.com")
+Student.create(name:"satish3", email:"sk3@example.com")

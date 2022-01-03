@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
   
+  get 'students/index'
+  get 'students/new'
   #devise_for :users
   root to: 'home#index'
   get 'about', to: 'home#about'
 
   get 'courses/new', to: 'courses#new'
   get 'courses/index', to: 'courses#index'
+
+  resources :students, except: [:destroy]
   # root 'home#index' 
 
   # namespace :api do
