@@ -19,6 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 # Adding all my gems here
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'devise'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -39,8 +40,14 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+# gem 'rack-cors'
+
+gem 'materialize-sass', '~> 1.0.0'
+gem 'material_icons' 
 
 group :development, :test do
+  gem 'pry'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
