@@ -10,6 +10,8 @@
         <h6>Current Enrollements</h6>
       </div>
     </div>
-    <%= link_to '<i class="material-icons right">create</i>Edit Profile'.html_safe, edit_student_path(@student), class: "waves-effect waves-light btn" %>
+    <% if current_student == @student %>
+      <%= link_to '<i class="material-icons right">create</i>Edit Profile'.html_safe, edit_student_path(@student), class: "waves-effect waves-light btn" %>
+    <% end %>
   </div>
 </div>

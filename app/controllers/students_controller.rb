@@ -1,5 +1,8 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: [:show, :edit, :update]
+  skip_before_action :require_student, only: [:new, :create]
+  before_action :only_current_student, only: [:edit, :update]
+
 
   def index
     @students = Student.all
@@ -37,10 +40,17 @@ class StudentsController < ApplicationController
   private
 
   def student_params
-    params.require(:student).permit(:name, :email)
+    params.require(:student).permit(:name, :email, :password, :password_confirmation)
   end
 
   def set_student
     @student = Student.find(params[:id])
+  end
+
+  def only_current_student
+    if current_student != @student
+      flash[:notice] = "You can edit only your profile"
+      redirect_to student_path(current_student)
+    end
   end
 end
