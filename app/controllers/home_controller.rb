@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   skip_before_action :require_student
-  def index
-    @courses = Course.all
+  
+  def index    
   end
 
   def about

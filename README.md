@@ -1,4 +1,25 @@
 # Rails5App
+
+* TRUNCATE users RESTART IDENTITY;
+
+* select * from users;
+
+* `rails g migration create_courses`
+
+* require 'hirb'
+* Hirb.enable({:width => 155, :height => 500})
+
+* Student.first.authenticate("password") => returns Student obj if true else returns false
+
+## Many to many relation
+* student = Student.first
+* course = Course.first
+* student.courses , course.students ==> #<ActiveRecord::Associations::CollectionProxy []>
+* student.courses << course
+
+
+## Bootstrap installation steps
+
 Added following gems
 * gem 'bootstrap', '~> 4.0.0'
 * gem 'jquery-rails'
@@ -13,6 +34,8 @@ go to application.js and add below lines after //= require_tree . line\
 //= require popper\
 //= require bootstrap-sprocket
 
+
+## API
 
 User List
 localhost:3000/api/v1/users
@@ -53,13 +76,4 @@ Update Tag:
 localhost:3000/api/v1/update_tag?name=t3tagggggg&username=sk5
 POST
 
-TRUNCATE users RESTART IDENTITY;
-
-select * from users;
-
 ========================================================
-* `rails g migration create_courses`
-* require 'hirb'
-* Hirb.enable({:width => 155, :height => 500})
-
-* Student.first.authenticate("password") => returns Student obj if true else returns false
